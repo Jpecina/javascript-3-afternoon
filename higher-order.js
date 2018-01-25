@@ -135,12 +135,13 @@ let bobsTotal = purchases.reduce(function(acc, item){
     if(item.owner === "Bob"){
     return  acc + item.price
     }
-    
+    return acc;
 },0)
+
 // for(let key in obj){
 //   obj[key]
 // }
 
 
-console.log(bobsTotal);
+// console.log(bobsTotal);
 
