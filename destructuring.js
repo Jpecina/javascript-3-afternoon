@@ -116,7 +116,7 @@ obj1 = {
 
 
 function largeNumbers({first,second,third}){
-  if( first >  )
+return Math.min(first,second,third)
 };
 
 
