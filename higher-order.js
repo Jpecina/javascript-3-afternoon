@@ -65,7 +65,9 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 // let totalPopulation = populations.reduce(function(i){
 
 // })
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+let totalPopulation = populations.reduce(function(result,item){
+  return result + item
+},0)
 
 
 
@@ -127,8 +129,8 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal = purchases.reduce(function(sum, order){
-  return sum + order.bob.price;
+let bobsTotal = purchases.reduce(function(result, item){
+  return result + item.bob.price;
 },0)
 
 
