@@ -109,7 +109,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a high order method to get sum of all the order totals
 */
 
-let ordersTotal //Code Here
+let ordersTotal = orders.reduce()
 
 
 
@@ -130,7 +130,8 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 let bobsTotal = purchases.reduce(function(result, item){
-  return result + item.bob.price;
+  if(purchases[key] === "Bob")
+    {return result + item.bob.price};
 },0)
 
 
