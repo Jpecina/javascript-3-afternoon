@@ -80,13 +80,12 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-// let removeDuplicates = workplaceAccidents.forEach(item){
-//   if (num === 56){
-//      num.splice(0,1);
-//   }
-//   return num;
-// }
-
+function removeDuplicates(arr){
+  let unique_array = arr.filter(function(elem, index, self) {
+      return index == self.indexOf(elem);
+  });
+  return unique_array
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -155,7 +154,15 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(arr){
+  for (i = 0; i<arr.length;i++){
+    for(let key in obj){
+      if(obj[key] === true){
+        obj[key] = false;
+      }
+    }
+  }
+}
 
 
 
