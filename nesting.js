@@ -80,7 +80,12 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+// let removeDuplicates = workplaceAccidents.forEach(item){
+//   if (num === 56){
+//      num.splice(0,1);
+//   }
+//   return num;
+// }
 
 
 
@@ -169,6 +174,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(arr,){
+  for (let i = 0; i < arr.length; i++){
+    for(let [i] = 0;[i]<arr.length;i++){
+      if ([i] % 2 === 0){
+        arr.push("even");
+      }
+      else{
+        arr.push("odd");
+      }
+    }
+  }
+}
 
 
