@@ -154,16 +154,14 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-function recordCleaner(arr){
-  for (i = 0; i<arr.length;i++){
-    for(let key in arr){
-      if(arr.atFaultForAccident === true){
-        arr.atFaultForAccident = false;
-      }
-    }
-  }
+function recordCleaner (){
+  let array = myCar.accidents.map( val => {
+    val.atFaultForAccident = false;
+    return val
+  })
+  myCar.accidents = array;
+  return myCar
 }
-
 
 
 ////////// PROBLEM 5 //////////
@@ -181,19 +179,22 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-function looper(arr){
-  let newArr=[];
-  for (let i = 0; i < arr.length; i++){
-    for(let j = 0;j<arr[i].length;j++){
-      if (arr[i][j] % 2 === 0){
-        newArr.push("even");
+function looper(){
+  let newArr=[[],[],[]];
+
+  for (let i = 0; i < numsArr.length; i++){
+
+    for(let j = 0;j<numsArr[i].length;j++){
+      if (numsArr[i][j] % 2 === 0){
+        newArr[i].push("even");
       }
       else{
-        newArr.push("odd");
+        newArr[i].push("odd");
       }
     }
   }
   return newArr;
 }
+
 
 
